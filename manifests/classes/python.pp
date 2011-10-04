@@ -1,10 +1,10 @@
 class buildenv::python {
 
-  package {"python-dev":
+  package {'python-dev':
     ensure => present,
     name   => $operatingsystem ? {
-      /RedHat|Fedora|CentOS/ => "python-devel",
-      /Debian|Ubuntu/        => "python-dev",
+      /RedHat|Fedora|CentOS/ => 'python-devel',
+      /Debian|Ubuntu/        => 'python-dev',
     }
   }
 
